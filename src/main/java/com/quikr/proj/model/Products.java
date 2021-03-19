@@ -89,13 +89,16 @@ public class Products{
     private String location;
     @Column(name = "verified")
     private Boolean verified;
+    @Column(name="imageurl")
+    private  String imageurl;
 
-    public Products(Integer id, Integer price, String title, String location, Boolean verified) {
+    public Products(Integer id, Integer price, String title, String location, Boolean verified,String imageurl) {
         this.id = id;
         this.price = price;
         this.title = title;
         this.location = location;
         this.verified = verified;
+        this.imageurl=imageurl;
     }
 
     public Products() {
@@ -140,6 +143,14 @@ public class Products{
 
     public void setVerified(Boolean verified) {
         this.verified = verified;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 }
 
