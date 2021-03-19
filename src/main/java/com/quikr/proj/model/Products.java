@@ -2,7 +2,7 @@ package com.quikr.proj.model;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
+//hello broo
 
 //    Id Title
 //    Content
