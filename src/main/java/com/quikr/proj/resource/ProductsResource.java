@@ -31,14 +31,14 @@ public class ProductsResource
     @GetMapping(value = "/byid/{id}")
     public Optional<Products> getbyid(@PathVariable Integer id){
         Optional<Products> productList=productRepository.findById(id);
-        System.out.println("This is Products list!!!!!!");
+        System.out.println("This is alll list!!!!!!");
         System.out.println(productList);
         return productList;
     }
-    @GetMapping(value = "/bycity/{city}")
-    public Optional<List<Products>> getAllbycity(@PathVariable String city){
-        Optional<List<Products>> productList=productRepository.findAllByCityName(city);
-        System.out.println("This is Products list!!!!!!");
+    @GetMapping(value = "/bycity/{location}")
+    public Optional<List<Products>> getAllbycity(@PathVariable String location){
+        Optional<List<Products>> productList=productRepository.findAllByLocation(location);
+        System.out.println("by location !!!!!!");
         System.out.println(productList);
         return productList;
     }
